@@ -1,0 +1,36 @@
+package myinsertion.code;
+import java.util.Arrays;
+
+public class MyinsertionCode {
+
+   
+    public static void main(String[] args) {
+        mycode mysortingcode=new mycode();
+        int Array[]={20,17,6,11,3,2,1};
+        mysortingcode.insert(Array);
+        System.out.println(Arrays.toString(Array));
+     
+    }
+   }
+package myinsertion.code;
+
+/**
+ *
+ * @author sooda
+ */
+public class mycode {
+    public static void insert(int[]Array){
+    for(int j=1; j<Array.length; j++)
+    {
+    int key=Array[j];
+    int i=j-1;
+    while((i>=0)&&(Array[i]>key))
+    {
+    Array[i+1]=Array[i];
+    i=i-1;
+    }
+    Array[i+1]=key;
+    }
+  
+}
+}
